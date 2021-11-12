@@ -20,7 +20,6 @@ for player in range(quantidadeJogadores):
         print('Número Inválido! Digite um número entre 0 e 10!')
 controle = soma
 
-
 # Lógica matemática para determinar o jogador vencedor
 while True:
     controle -= quantidadeJogadores
@@ -29,9 +28,14 @@ while True:
         break
 
 # Resultado Final
-print(f'Total: {soma}') # Mostra na tela a soma
-print(f'O vencedor foi o participante de número {controle}!') # Mostra na tela o vencedor
-
-
-
-
+print('SOMANDO OS DEDOS', end='')
+sleep(0.8)
+print('.', end='')
+sleep(0.8)
+print('.', end='')
+sleep(0.8)
+print('.')
+sleep(0.8)
+print(f'O TOTAL de dedos é {soma}') # Mostra na tela a soma
+sleep(0.8)
+print(f'O VENCEDOR foi o participante de NÚMERO {controle}!') # Mostra na tela o vencedor
