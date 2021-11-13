@@ -1,4 +1,6 @@
 from time import sleep
+import emoji
+
 cont = 0
 
 saque = int(input('Qual o valor do saque R$ '))
@@ -17,18 +19,23 @@ resto_nota_5 = resto_nota_10 % 5
 nota_2 = resto_nota_5 // 2
 nota_1 = resto_nota_5 % 2
 
-
 # INTERAÇÃO COM USUÁRIO USANDO SLEEP PARA SIMULAR RETARDO NO PROCESSAMENTO DO PEDIDO
 print('PREPARANDO SEU SAQUE, POR FAVOR AGUARDE', end='')
 sleep(0.8)
-print('.', end='')
+print(emoji.emojize(":money_with_wings:"), end='')
 sleep(0.8)
-print('.', end='')
+print(emoji.emojize(":money_with_wings:"), end='')
 sleep(0.8)
-print('.')
+print(emoji.emojize(":money_with_wings:"))
+sleep(0.8)
 
 # MOSTRA NA TELA O RESULTADO DO SAQUE
 cedulas = (nota_100, nota_50, nota_20, nota_10, nota_5, nota_2, nota_1)
+print('Seu saque terá:')
 for i in (100,50,20,10,5,2,1):
-    print(f'{i} : {cedulas[cont]}')
+    if cedulas[cont] > 0:
+        print(f'{cedulas[cont]} cédulas de R${i}', end=' ')
+        sleep(0.8)
+        print(emoji.emojize(":money_bag:"))
+        sleep(0.8)
     cont += 1
