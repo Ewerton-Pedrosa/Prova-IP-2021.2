@@ -2,7 +2,6 @@ from time import sleep
 import emoji
 
 cont = 0
-
 saque = int(input('Qual o valor do saque R$ '))
 
 # CALCULO QUE DEFINE SAÍDA DAS NOTAS
