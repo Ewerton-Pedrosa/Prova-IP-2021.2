@@ -30,9 +30,10 @@ somatorioDivQtNotas = somaDistancias/qtNotas # Somatorio dividido pela quantidad
 desvioPadrao = math.sqrt(somatorioDivQtNotas) # Uso biblioteca Math para calcular Raiz Quadrada
 
 # EXIBIR RESULTADOS
+print('\n------ RESULTADO FINAL ------')
 print(f'Notas na ordem de inserção: {notas}') # Mostra notas na Ordem de entrada
-print(qtNotas) # Mostra quantas notas foram inseridas
-print(somaNotas) # Mostra a soma das notas
-print(media) # Mostra a média das notas
-print(notasAcimaMedia) # Lista com notas acima da média
-print(desvioPadrao)
+print(f'Foram inseridas {qtNotas} notas') # Mostra quantas notas foram inseridas
+print(f'A soma das notas é igual a {somaNotas}') # Mostra a soma das notas
+print(f'A média das notas é {media}') # Mostra a média das notas
+print(f'Essas: {notasAcimaMedia} são as notas acima da média') # Lista com notas acima da média
+print(f'O desvio padrão das notas informadas é {desvioPadrao}')
