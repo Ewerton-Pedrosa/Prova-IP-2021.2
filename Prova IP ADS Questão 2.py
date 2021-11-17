@@ -3,9 +3,10 @@ candidatosList = []
 eleitores = []
 eleitorVotou = []
 votosValidos = []
+contagemDeVotos = []
 votosNulos = votosBrancos =0
 
-# INICIA COM O CADASTRO DE CANDIDATOS
+# ------------INICIA COM O CADASTRO DE CANDIDATOS------------
 print('INICIANDO CADASTRO DE CANDIDATOS // PARA FINALIZAR O CADASTRO DIGITE: FIM')
 while True:
     print('=-='*20)
@@ -26,10 +27,11 @@ while True:
     candidatosList.append(numCandidato) # Lista auxiliar           
     candidatos[numCandidato] = candidato 
 candidatosLock = tuple(candidatos.items()) 
+""" TESTES print(f'candidatos list: {candidatosList}')
 print(candidatosLock)
-print(candidatosLock[0][1]) # Achando elemento na tupla dentro da tupla
+print(candidatosLock[0][1]) # Achando elemento na tupla dentro da tupla"""
 
-# CADASTRO DE ELEITORES
+# ------------CADASTRO DE ELEITORES------------
 print('INICIANDO CADASTRO DE ELEITORES // PARA FINALIZAR O CADASTRO DIGITE: FIM')
 while True:
     eleitor = input(f'Cadastre o indentificador do {len(eleitores)+1}º eleitor: ')
@@ -47,9 +49,9 @@ while True:
         break
     eleitores.append(eleitor)
 eleitoresLock = tuple(eleitores)
-print(eleitoresLock)
+#teste print(eleitoresLock)
 
-# INICIO DA VOTAÇÃO
+# ------------INICIO DA VOTAÇÃO------------
 print('-=-'*25)
 print('INICIO DA VOTAÇÃO')
 print('-=-'*25)
@@ -62,7 +64,7 @@ for i in range(len(eleitoresLock)):
             print('ID de Eleitor NÃO CADASTRADO! Insira um ID válido!')
             idEleitor = input('Digite o ID do Eleitor: ')
         elif idEleitor in eleitorVotou:
-            
+
             # LOOP QUE VERIFICA SE ELEITOR JÁ VOTOU
             while True:
                 print('Eleitor já votou, insira novo ID de Eleitor!')
@@ -83,6 +85,17 @@ for i in range(len(eleitoresLock)):
     else:
         votosValidos.append(voto)   
 
+# ------------ APURAÇÃO DOS VOTOS // RESULTADO FINAL ------------
+# CRIO LISTA COM QUANTIDADE DE VOTOS POR CANDIDATO
+for i in range(len(candidatosList)):
+    contagemDeVotos.append(votosValidos.count(candidatosList[i]))
+maisVotos = max(contagemDeVotos, key=int)
+posicaoMaisVotado = contagemDeVotos.index(maisVotos)
+
+
+print(f'O vencedor é {candidatosLock[posicaoMaisVotado][1]}')
+print(f'a posição do mais vota do é {posicaoMaisVotado}')
+print(contagemDeVotos)
 print(f'votos válidos {votosValidos}')
 print(f'votos nulos: {votosNulos}')
 print(f'votos brancos: {votosBrancos}')
