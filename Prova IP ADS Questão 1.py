@@ -6,6 +6,9 @@ from time import sleep
 soma = subtracao = controle = 0
 
 # Iniciando jogo
+print('-=-'*25)
+print(f'{"JOGO ZERO OU UM AMERICANO":^75}')
+print('-=-'*25)
 while True:
     quantidadeJogadores = int(input('Qual o número de participantes? '))
     if quantidadeJogadores > 1: # Verifica validade da quantidade de participantes
