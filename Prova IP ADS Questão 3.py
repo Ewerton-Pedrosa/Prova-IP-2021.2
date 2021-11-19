@@ -2,6 +2,10 @@ from time import sleep
 import emoji
 
 cont = 0
+# ---------- CABEÇALHO ----------
+print('=-='*25)
+print(f'{"BANCO MUNDIAL":^75}')
+print('=-='*25)
 saque = int(input('Qual o valor do saque R$ '))
 
 # CALCULO QUE DEFINE SAÍDA DAS NOTAS
