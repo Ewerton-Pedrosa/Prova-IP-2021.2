@@ -31,6 +31,7 @@ while True:
         break
 
 # Resultado Final
+print('-=-'*25)
 print('SOMANDO OS DEDOS', end='')
 sleep(0.8)
 print('.', end='')
@@ -39,6 +40,7 @@ print('.', end='')
 sleep(0.8)
 print('.')
 sleep(0.8)
+print('-=-'*25)
 print(f'O TOTAL de dedos é {soma}') # Mostra na tela a soma
 sleep(0.8)
 print(f'O VENCEDOR foi o participante de NÚMERO {controle}!') # Mostra na tela o vencedor
