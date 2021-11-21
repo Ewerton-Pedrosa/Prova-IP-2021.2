@@ -39,7 +39,7 @@ candidatosLock = tuple(candidatos.items()) # Transforma em tupla para não haver
 
 # ------------CADASTRO DE ELEITORES------------
 print('-==-'*25)
-print(f'{"INICIANDO CADASTRO DE ELEITORES // PARA FINALIZAR O CADASTRO DIGITE: FIM":^75}')
+print(f'{"INICIANDO CADASTRO DE ELEITORES // PARA FINALIZAR O CADASTRO DIGITE: 0":^75}')
 print('-==-'*25)
 while True:
     eleitor = input(f'Cadastre o indentificador do {len(eleitores)+1}º eleitor: ')
