@@ -11,7 +11,7 @@ print(f'{"CÁLCULO DE NOTAS":^75}')
 print('-=-'*25)
 # LOOP DE ENTRADA DE DADOS
 while True:
-    nota = int(input(f'Digite a nota {cont}: '))
+    nota = float(input(f'Digite a nota {cont}: '))
     if 0 <= nota <= 10:
         notas.append(nota)
         cont += 1
